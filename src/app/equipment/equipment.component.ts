@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipment.component.css']
 })
 export class EquipmentComponent implements OnInit {
-   equipmentItems: object[] = [
+   equipmentItems: Equipment[] = [
        {name: 'Duct Tape', mass: 0.5},
        {name: 'Space Camera', mass: 20},
        {name: 'Food', mass: 150},
@@ -27,5 +27,14 @@ export class EquipmentComponent implements OnInit {
    ngOnInit() { }
 
    // Code your addItem function here:
-   
+    addItem(equipment: Equipment): boolean {
+      this.cargoHold.push(equipment)
+      this.cargoMass += equipment.mass
+      return this.cargoMass +200 >= this.maximumAllowedMass
+    }
+}
+
+interface Equipment {
+  name: string,
+  mass: number
 }
