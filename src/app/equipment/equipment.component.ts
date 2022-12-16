@@ -27,11 +27,18 @@ export class EquipmentComponent implements OnInit {
    ngOnInit() { }
 
    // Code your addItem function here:
-    addItem(equipment: Equipment): boolean {
+  addItem(equipment: Equipment): boolean {
+      if(!this.cargoHold.includes(equipment)) {
       this.cargoHold.push(equipment)
       this.cargoMass += equipment.mass
-      return this.cargoMass +200 >= this.maximumAllowedMass
-    }
+        return this.cargoMass + 200 >= this.maximumAllowedMass
+      }
+  }
+  
+  removeItem(equipment: Equipment) {
+    let index = this.cargoHold.indexOf(equipment)
+    this.cargoHold.splice(index,1)
+  }
 }
 
 interface Equipment {

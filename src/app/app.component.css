@@ -3,3 +3,11 @@
     padding: 10px;
     justify-content: space-evenly;
 }
+
+.displayBox {
+    height: 275px;
+    width: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 4em;
+}

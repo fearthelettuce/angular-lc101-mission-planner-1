@@ -1,6 +1,9 @@
 .displayBox {
     height: 275px;
     width: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 2em;
 }
 
 button {

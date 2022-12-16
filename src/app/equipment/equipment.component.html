@@ -25,6 +25,7 @@
   <h3>Cargo Hold: {{ cargoHold.length }}/{{ maxItems }} Spots Filled</h3>
   <ol>
     <li *ngFor="let equipment of cargoHold">
+      <span><button (click)="removeItem(equipment)">Remove</button></span>
       {{ equipment.name }}
     </li>
   </ol>
