@@ -7,9 +7,17 @@ button {
     margin: 2px;
     cursor: pointer;
 }
+button:enabled {
+    background: lightblue
+}
 
 h3 {
     text-align: center;
+}
+
+.nearMaxMass {
+    font-weight: bold;
+    color: rgb(233, 94, 39)
 }
 
 /* Add an 'active' class to style the background of the 'Add to Cargo Hold' buttons. */
